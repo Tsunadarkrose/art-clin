@@ -193,7 +193,7 @@ p { color: var(--text-secondary); font-size: 1.0625rem; font-weight: 400; margin
   position: absolute;
   bottom: -40px; left: 0; width: 100%; height: 140px;
   background: linear-gradient(to bottom, var(--surface-warm) 0%, rgba(255,255,255,.5) 40%, #FFFFFF 100%);
-  pointer-events: none; z-index: 5;
+  pointer-events: none; z-index: 1;
 }
 #reconhecimento { position: relative; z-index: 2; }
 
@@ -288,6 +288,7 @@ p { color: var(--text-secondary); font-size: 1.0625rem; font-weight: 400; margin
   position: relative;
   width: 340px; height: 420px;
   flex-shrink: 0;
+  z-index: 10;
 }
 
 /* OVAL shape: border-radius 50% / 60% */
@@ -317,7 +318,7 @@ p { color: var(--text-secondary); font-size: 1.0625rem; font-weight: 400; margin
   border: none !important;
   box-shadow: none !important;
   background-color: transparent !important;
-  z-index: 1;
+  z-index: 10;
 }
 
 @media (min-width: 1024px) {
@@ -365,6 +366,12 @@ p { color: var(--text-secondary); font-size: 1.0625rem; font-weight: 400; margin
 @keyframes heroPimentaFloat {
   0%, 100% { transform: translateY(0) rotate(0deg); }
   50%      { transform: translateY(-12px) rotate(3deg); }
+}
+
+@media (max-width: 767px) {
+  .hero-pimenta {
+    filter: none !important;
+  }
 }
 
 /* PIMENTA no CTA final — apontando pro botão */
